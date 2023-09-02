@@ -32,12 +32,53 @@ class MyApp extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
             child: Row(
               children: [
-                Text(
-                  "Brasil",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                )
+                Container(
+                  child: Row(children: [
+                    Text(
+                      'Brasil',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ]),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(250, 0, 0, 0),
+                  child: Row(children: [
+                    Icon(
+                      Icons.star_rate,
+                      color: Colors.blue,
+                    ),
+                    Icon(
+                      Icons.star_rate,
+                      color: Colors.blue,
+                    ),
+                    Icon(
+                      Icons.star_rate,
+                      color: Colors.blue,
+                    ),
+                  ]),
+                ),
               ],
             ),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Row(
+              children: [
+                Text(
+                  "Ji-Paraná, Rondônia",
+                  style: TextStyle(color: Colors.grey, fontSize: 18),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(40, 50, 0, 0),
+            child: Row(children: [
+              OutlinedButton(onPressed: () {}, child: Icon(Icons.facebook)),
+              OutlinedButton(onPressed: () {}, child: Text('Olá')),
+              OutlinedButton(onPressed: () {}, child: Text('Olá')),
+            ]),
           ),
         ]),
       ),
