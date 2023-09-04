@@ -14,13 +14,8 @@ class MyApp extends StatelessWidget {
           child: ListView(
             children: [
               DrawerHeader(
-                child: Text("Bem-vindo ao meu App"),
-                decoration: BoxDecoration(color: Colors.amber),
+                child: Text(""),
               ),
-              ListTile(
-                title: Text("Teste"),
-                onTap: () {},
-              )
             ],
           ),
         ),
@@ -78,7 +73,7 @@ class MyApp extends StatelessWidget {
               SizedBox(
                 width: 120,
                 height: 80,
-                child: OutlinedButton(
+                child: TextButton(
                     onPressed: () {},
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -87,14 +82,14 @@ class MyApp extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-                        Text("Facebook")
+                        Text("Facebook", style: TextStyle(color: Colors.black))
                       ],
                     )),
               ),
               SizedBox(
                 width: 120,
                 height: 80,
-                child: OutlinedButton(
+                child: TextButton(
                     onPressed: () {},
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -103,14 +98,14 @@ class MyApp extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-                        Text("Endereço")
+                        Text("Endereço", style: TextStyle(color: Colors.black)),
                       ],
                     )),
               ),
               SizedBox(
                 width: 125,
                 height: 80,
-                child: OutlinedButton(
+                child: TextButton(
                     onPressed: () {},
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -119,7 +114,10 @@ class MyApp extends StatelessWidget {
                         SizedBox(
                           height: 15,
                         ),
-                        Text("Compartilhar")
+                        Text(
+                          "Compartilhar",
+                          style: TextStyle(color: Colors.black),
+                        )
                       ],
                     )),
               ),
@@ -130,7 +128,7 @@ class MyApp extends StatelessWidget {
             child: Text(
               "Ji-Paraná é um município brasileiro do estado de Rondônia. Sua população, conforme estimativas do IBGE de 2021, era de 131.026 habitantes, sendo o segundo mais populoso do estado e o décimo sexto mais populoso da Região Norte do Brasil, a 226ª mais populosa do Brasil e a 113ª mais populosa cidade do interior brasileiro.",
               textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16, color: Colors.black),
             ),
           )
         ]),
