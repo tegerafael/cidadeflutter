@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
                     Text(
                       'Brasil',
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                   ]),
                 ),
@@ -75,12 +75,77 @@ class MyApp extends StatelessWidget {
           Container(
             padding: EdgeInsets.fromLTRB(40, 50, 0, 0),
             child: Row(children: [
-              OutlinedButton(onPressed: () {}, child: Icon(Icons.facebook)),
-              OutlinedButton(onPressed: () {}, child: Text('Olá')),
-              OutlinedButton(onPressed: () {}, child: Text('Olá')),
+              SizedBox(
+                width: 120,
+                height: 80,
+                child: OutlinedButton(
+                    onPressed: () {},
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.facebook),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text("Facebook")
+                      ],
+                    )),
+              ),
+              SizedBox(
+                width: 120,
+                height: 80,
+                child: OutlinedButton(
+                    onPressed: () {},
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.map),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text("Endereço")
+                      ],
+                    )),
+              ),
+              SizedBox(
+                width: 125,
+                height: 80,
+                child: OutlinedButton(
+                    onPressed: () {},
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.share),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text("Compartilhar")
+                      ],
+                    )),
+              ),
             ]),
           ),
+          Container(
+            padding: EdgeInsets.fromLTRB(20, 50, 20, 10),
+            child: Text(
+              "Ji-Paraná é um município brasileiro do estado de Rondônia. Sua população, conforme estimativas do IBGE de 2021, era de 131.026 habitantes, sendo o segundo mais populoso do estado e o décimo sexto mais populoso da Região Norte do Brasil, a 226ª mais populosa do Brasil e a 113ª mais populosa cidade do interior brasileiro.",
+              textAlign: TextAlign.justify,
+              style: TextStyle(fontSize: 16),
+            ),
+          )
         ]),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Perfil',
+            ),
+          ],
+        ),
       ),
     );
   }
